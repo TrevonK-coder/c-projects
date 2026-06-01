@@ -20,6 +20,11 @@ A curated collection of C# and .NET applications showcasing clean architecture, 
 * **IDE:** Visual Studio 2022, VS Code, or JetBrains Rider
 * **Languages:** C# 12
 
+## 📂 Projects
+
+### 1. [Package Express Console App](./PackageExpress)
+A C# console application for calculating package shipping quotes with input validation for weight and dimensions.
+
 ---
 
 ## 📦 Getting Started
