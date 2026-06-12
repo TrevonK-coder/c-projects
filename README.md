@@ -25,6 +25,9 @@ A curated collection of C# and .NET applications showcasing clean architecture, 
 ### 1. [Package Express Console App](./PackageExpress)
 A C# console application for calculating package shipping quotes with input validation for weight and dimensions.
 
+### 2. [Method Class Assignment](./MethodClassAssignment)
+A C# console application demonstrating void methods, math operations, positional arguments, and named arguments.
+
 ---
 
 ## 📦 Getting Started
