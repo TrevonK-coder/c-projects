@@ -28,6 +28,9 @@ A C# console application for calculating package shipping quotes with input vali
 ### 2. [Method Class Assignment](./MethodClassAssignment)
 A C# console application demonstrating void methods, math operations, positional arguments, and named arguments.
 
+### 3. [Class Method Assignment](./ClassMethodAssignment)
+A C# console application demonstrating void methods with output parameters (`out`), method overloading, and static classes.
+
 ---
 
 ## 📦 Getting Started
