@@ -34,6 +34,9 @@ A C# console application demonstrating void methods with output parameters (`out
 ### 4. [Methods and Objects Assignment](./MethodsAndObjectsAssignment)
 A C# console application demonstrating class inheritance, where a derived `Employee` class inherits properties and methods from a base `Person` class.
 
+### 5. [Abstract Class Assignment](./AbstractClassAssignment)
+A C# console application demonstrating abstract classes, abstract methods, method overriding, and inheritance.
+
 ---
 
 ## 📦 Getting Started
