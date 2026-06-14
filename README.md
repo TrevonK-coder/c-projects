@@ -31,6 +31,9 @@ A C# console application demonstrating void methods, math operations, positional
 ### 3. [Class Method Assignment](./ClassMethodAssignment)
 A C# console application demonstrating void methods with output parameters (`out`), method overloading, and static classes.
 
+### 4. [Methods and Objects Assignment](./MethodsAndObjectsAssignment)
+A C# console application demonstrating class inheritance, where a derived `Employee` class inherits properties and methods from a base `Person` class.
+
 ---
 
 ## 📦 Getting Started
