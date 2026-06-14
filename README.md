@@ -37,6 +37,9 @@ A C# console application demonstrating class inheritance, where a derived `Emplo
 ### 5. [Abstract Class Assignment](./AbstractClassAssignment)
 A C# console application demonstrating abstract classes, abstract methods, method overriding, and inheritance.
 
+### 6. [Interface Assignment](./InterfaceAssignment)
+A C# console application demonstrating interfaces, inheritance, implementation, and polymorphism.
+
 ---
 
 ## 📦 Getting Started
