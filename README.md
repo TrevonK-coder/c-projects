@@ -40,6 +40,9 @@ A C# console application demonstrating abstract classes, abstract methods, metho
 ### 6. [Interface Assignment](./InterfaceAssignment)
 A C# console application demonstrating interfaces, inheritance, implementation, and polymorphism.
 
+### 7. [Operator Overloading Assignment](./OperatorOverloadingAssignment)
+A C# console application demonstrating C# operator overloading by overloading the `==` and `!=` operators on the `Employee` class.
+
 ---
 
 ## 📦 Getting Started
