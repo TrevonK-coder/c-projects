@@ -46,6 +46,9 @@ A C# console application demonstrating C# operator overloading by overloading th
 ### 8. [Lambda Expression Assignment](./LambdaExpressionAssignment)
 A C# console application demonstrating list operations, standard `foreach` loop filtering, and LINQ lambda expression filtering.
 
+### 9. [Datetime Assignment](./DatetimeAssignment)
+A C# console application demonstrating C# datetime calculation operations by taking numerical hours from the user.
+
 ---
 
 ## 📦 Getting Started
