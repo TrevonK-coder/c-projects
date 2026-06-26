@@ -43,6 +43,9 @@ A C# console application demonstrating interfaces, inheritance, implementation, 
 ### 7. [Operator Overloading Assignment](./OperatorOverloadingAssignment)
 A C# console application demonstrating C# operator overloading by overloading the `==` and `!=` operators on the `Employee` class.
 
+### 8. [Lambda Expression Assignment](./LambdaExpressionAssignment)
+A C# console application demonstrating list operations, standard `foreach` loop filtering, and LINQ lambda expression filtering.
+
 ---
 
 ## 📦 Getting Started
