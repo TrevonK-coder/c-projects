@@ -49,6 +49,9 @@ A C# console application demonstrating list operations, standard `foreach` loop 
 ### 9. [Datetime Assignment](./DatetimeAssignment)
 A C# console application demonstrating C# datetime calculation operations by taking numerical hours from the user.
 
+### 10. [Constructor Assignment](./ConstructorAssignment)
+A C# console application demonstrating constant variables, implicitly typed variables (using `var`), and constructor chaining.
+
 ---
 
 ## 📦 Getting Started
