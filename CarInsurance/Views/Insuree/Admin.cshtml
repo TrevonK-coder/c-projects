@@ -1,0 +1,57 @@
+@model IEnumerable<CarInsurance.Models.Insuree>
+
+@{
+    ViewData["Title"] = "Admin Portal";
+}
+
+<div class="container mt-5">
+    <div class="glass-card">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <div>
+                <h1 class="gradient-text h2 mb-1">Admin Portal</h1>
+                <p style="color: var(--text-muted); font-size: 0.95rem;">Issued Car Insurance Quotes Registry</p>
+            </div>
+            <div>
+                <a asp-action="Create" class="btn btn-primary-custom btn-sm">Create New Quote</a>
+            </div>
+        </div>
+        <hr style="border-color: var(--glass-border);" />
+
+        <div class="table-responsive">
+            <table class="table table-custom">
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Email Address</th>
+                        <th class="text-end">Calculated Quote</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model == null || !Model.Any())
+                    {
+                        <tr>
+                            <td colspan="4" class="text-center" style="color: var(--text-muted); padding: 3rem;">
+                                No insurance quotes have been issued yet.
+                            </td>
+                        </tr>
+                    }
+                    else
+                    {
+                        foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.FirstName</td>
+                                <td>@item.LastName</td>
+                                <td>@item.EmailAddress</td>
+                                <td class="text-end" style="color: var(--accent-cyan); font-weight: 600;">
+                                    @string.Format("{0:C}", item.Quote)
+                                </td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

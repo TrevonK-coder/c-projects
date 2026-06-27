@@ -1,0 +1,17 @@
+# Build directories
+bin/
+obj/
+[Bb]in/
+[Oo]bj/
+
+# SQLite Databases
+*.db
+*.db-shm
+*.db-wal
+
+# Visual Studio / VS Code configuration
+.vs/
+.vscode/
+*.user
+*.suo
+*.userossc

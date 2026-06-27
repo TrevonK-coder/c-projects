@@ -1,0 +1,118 @@
+@model CarInsurance.Models.Insuree
+
+@{
+    ViewData["Title"] = "Edit Quote";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <div class="glass-card">
+                <h2 class="text-center mb-4 gradient-text">Edit Quote Profile</h2>
+                <hr style="border-color: var(--glass-border);" />
+
+                <form asp-action="Edit">
+                    <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+                    <input type="hidden" asp-for="Id" />
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <div class="form-group">
+                                <label asp-for="FirstName" class="control-label"></label>
+                                <input asp-for="FirstName" class="form-control form-control-custom" />
+                                <span asp-validation-for="FirstName" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="form-group">
+                                <label asp-for="LastName" class="control-label"></label>
+                                <input asp-for="LastName" class="form-control form-control-custom" />
+                                <span asp-validation-for="LastName" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <div class="form-group">
+                            <label asp-for="EmailAddress" class="control-label"></label>
+                            <input asp-for="EmailAddress" class="form-control form-control-custom" />
+                            <span asp-validation-for="EmailAddress" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <div class="form-group">
+                            <label asp-for="DateOfBirth" class="control-label"></label>
+                            <input asp-for="DateOfBirth" class="form-control form-control-custom" />
+                            <span asp-validation-for="DateOfBirth" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <div class="form-group">
+                                <label asp-for="CarYear" class="control-label"></label>
+                                <input asp-for="CarYear" class="form-control form-control-custom" />
+                                <span asp-validation-for="CarYear" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="form-group">
+                                <label asp-for="CarMake" class="control-label"></label>
+                                <input asp-for="CarMake" class="form-control form-control-custom" />
+                                <span asp-validation-for="CarMake" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="form-group">
+                                <label asp-for="CarModel" class="control-label"></label>
+                                <input asp-for="CarModel" class="form-control form-control-custom" />
+                                <span asp-validation-for="CarModel" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row align-items-center mb-3">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label asp-for="SpeedingTickets" class="control-label"></label>
+                                <input asp-for="SpeedingTickets" class="form-control form-control-custom" min="0" />
+                                <span asp-validation-for="SpeedingTickets" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6 text-md-center mt-3 mt-md-0">
+                            <div class="form-check d-inline-block">
+                                <input asp-for="DUI" class="form-check-input form-check-input-custom" />
+                                <label asp-for="DUI" class="form-check-label ms-2" style="color: var(--text-muted);"></label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <div class="form-group">
+                            <label asp-for="CoverageType" class="control-label"></label>
+                            <select asp-for="CoverageType" class="form-select form-control-custom">
+                                <option value="Liability">Liability Coverage</option>
+                                <option value="Full">Full Coverage</option>
+                            </select>
+                            <span asp-validation-for="CoverageType" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <!-- Note: The "Quote" input field is omitted so that the user does not see it, per requirements. -->
+
+                    <div class="d-grid mt-4">
+                        <button type="submit" class="btn btn-primary-custom">Save Changes</button>
+                    </div>
+                </form>
+            </div>
+            <div class="text-center mt-3">
+                <a asp-action="Index" class="btn btn-link text-decoration-none" style="color: var(--text-muted);">Back to Dashboard</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

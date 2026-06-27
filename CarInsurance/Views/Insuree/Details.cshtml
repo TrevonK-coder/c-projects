@@ -1,0 +1,54 @@
+@model CarInsurance.Models.Insuree
+
+@{
+    ViewData["Title"] = "Quote Details";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="glass-card">
+                <h2 class="mb-4 gradient-text text-center">Quote Details</h2>
+                <hr style="border-color: var(--glass-border);" />
+
+                <div class="row mt-4">
+                    <div class="col-md-6 mb-3">
+                        <h5 class="text-muted small text-uppercase">Customer Info</h5>
+                        <p class="fs-5 mb-1">@Model.FirstName @Model.LastName</p>
+                        <p class="text-muted">@Model.EmailAddress</p>
+                        <p class="text-muted small">DOB: @Model.DateOfBirth.ToString("MM/dd/yyyy")</p>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <h5 class="text-muted small text-uppercase">Vehicle Details</h5>
+                        <p class="fs-5 mb-1">@Model.CarYear @Model.CarMake</p>
+                        <p class="text-muted">@Model.CarModel</p>
+                    </div>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="col-md-6 mb-3">
+                        <h5 class="text-muted small text-uppercase">Driving History</h5>
+                        <p class="mb-1">Speeding Tickets: <strong class="text-white">@Model.SpeedingTickets</strong></p>
+                        <p>DUI History: <span class="badge @(Model.DUI ? "bg-danger" : "bg-success")">@(Model.DUI ? "Yes" : "No")</span></p>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <h5 class="text-muted small text-uppercase">Coverage Choice</h5>
+                        <p class="fs-5">@Model.CoverageType Coverage</p>
+                    </div>
+                </div>
+
+                <hr style="border-color: var(--glass-border);" class="my-4" />
+
+                <div class="text-center bg-black bg-opacity-25 rounded-3 p-4 border border-1" style="border-color: var(--glass-border);">
+                    <h4 class="text-muted small text-uppercase mb-2">Your Monthly Premium</h4>
+                    <h1 class="display-4 font-weight-bold" style="color: var(--accent-cyan);">@string.Format("{0:C}", Model.Quote)</h1>
+                </div>
+
+                <div class="d-flex justify-content-between mt-4">
+                    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary-custom">Edit Profile</a>
+                    <a asp-action="Index" class="btn btn-secondary-custom">Back to Dashboard</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

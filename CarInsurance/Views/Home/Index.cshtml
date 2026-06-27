@@ -1,0 +1,21 @@
+@{
+    ViewData["Title"] = "Welcome";
+}
+
+<div class="container mt-5">
+    <div class="row align-items-center justify-content-center min-vh-75">
+        <div class="col-lg-8 text-center">
+            <div class="glass-card py-5">
+                <span class="badge bg-primary px-3 py-2 mb-3 text-uppercase" style="letter-spacing: 1px; font-weight: 600;">Next-Gen Insurance</span>
+                <h1 class="display-3 font-weight-bold mb-3 gradient-text">Smart Car Insurance Quotes</h1>
+                <p class="lead mb-4 mx-auto style-desc" style="color: var(--text-muted); max-width: 600px; font-size: 1.15rem;">
+                    Get an instant, customized monthly rate quote tailored to your driving history and vehicle profile in seconds. Safe driving pays off.
+                </p>
+                <div class="d-flex justify-content-center gap-3 flex-wrap mt-4">
+                    <a asp-controller="Insuree" asp-action="Create" class="btn btn-primary-custom px-4 py-3">Get Started Now</a>
+                    <a asp-controller="Insuree" asp-action="Index" class="btn btn-secondary-custom px-4 py-3">View Dashboard</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
