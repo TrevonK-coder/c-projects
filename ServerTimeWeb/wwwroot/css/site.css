@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --bg-primary: #08060f;
+  --bg-secondary: #0f0b21;
+  --accent-purple: #7c4dff;
+  --accent-cyan: #00e5ff;
+  --accent-glow: rgba(0, 229, 255, 0.3);
+  --text-primary: #f3efff;
+  --text-muted: #9fa0b8;
+  --glass-bg: rgba(20, 16, 43, 0.55);
+  --glass-border: rgba(124, 77, 255, 0.18);
+  --glass-border-focus: rgba(0, 229, 255, 0.5);
+  --shadow-main: 0 10px 40px 0 rgba(0, 0, 0, 0.45);
+  --transition-fast: 0.25s ease;
+}
+
+html {
+  font-size: 16px;
+  height: 100%;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background: radial-gradient(circle at 50% 50%, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+  background-attachment: fixed;
+  color: var(--text-primary);
+  margin-bottom: 60px;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+/* Navbar Customization */
+.navbar-custom {
+  background: rgba(8, 6, 15, 0.75) !important;
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--glass-border);
+}
+.navbar-custom .navbar-brand {
+  font-weight: 700;
+  color: var(--text-primary) !important;
+  background: linear-gradient(135deg, var(--accent-purple), var(--accent-cyan));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 0.5px;
+}
+.navbar-custom .nav-link {
+  color: var(--text-muted) !important;
+  font-weight: 500;
+  transition: var(--transition-fast);
+}
+.navbar-custom .nav-link:hover, .navbar-custom .nav-link.active {
+  color: var(--accent-cyan) !important;
+  text-shadow: 0 0 10px rgba(0, 229, 255, 0.5);
+}
+
+/* Glassmorphism Cards */
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  padding: 3rem 2.5rem;
+  box-shadow: var(--shadow-main);
+  animation: fadeIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Typography & Headers */
+h1, h2, h3, h4, h5 {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+.gradient-text {
+  background: linear-gradient(135deg, var(--text-primary) 30%, var(--accent-cyan) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Buttons */
+.btn-primary-custom {
+  background: linear-gradient(135deg, var(--accent-purple) 0%, #6200ea 100%);
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 600;
+  padding: 0.85rem 2rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(124, 77, 255, 0.35);
+  text-decoration: none;
+  display: inline-block;
+}
+.btn-primary-custom:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(124, 77, 255, 0.55);
+  color: #fff;
+}
+.btn-secondary-custom {
+  background: transparent;
+  border: 1px solid var(--glass-border);
+  border-radius: 10px;
+  color: var(--text-primary);
+  font-weight: 600;
+  padding: 0.85rem 2rem;
+  transition: var(--transition-fast);
+  text-decoration: none;
+  display: inline-block;
+}
+.btn-secondary-custom:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--text-primary);
+  color: #fff;
+}
+
+/* Footer */
+footer {
+  background: rgba(8, 6, 15, 0.75) !important;
+  border-top: 1px solid var(--glass-border);
+  color: var(--text-muted);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,51 @@
+@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Server Clock Portal";
+}
+
+<div class="container mt-5">
+    <div class="row align-items-center justify-content-center min-vh-75">
+        <div class="col-lg-6 text-center">
+            <div class="glass-card">
+                <span class="badge bg-info px-3 py-2 mb-3 text-uppercase" style="letter-spacing: 1.5px; font-weight: 600;">Live Feed</span>
+                
+                <!-- Customized <h2> element with text of choosing -->
+                <h2 class="mb-4 gradient-text" style="font-weight: 700;">System Server Clock</h2>
+                <hr style="border-color: var(--glass-border);" class="my-4" />
+                
+                <p class="text-muted small text-uppercase mb-2" style="letter-spacing: 1px;">Actual Server Time</p>
+                <div class="time-display-container py-3">
+                    <h1 class="display-5 font-weight-bold" id="live-clock" style="color: var(--accent-cyan); font-family: 'Courier New', Courier, monospace;">@Model.ServerTime</h1>
+                </div>
+
+                <div class="d-grid mt-4">
+                    <a asp-page="/Index" class="btn btn-primary-custom">Refresh Clock</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Live ticking clock in browser to enhance aesthetics and micro-interactions
+    setInterval(() => {
+        const clockEl = document.getElementById('live-clock');
+        if (clockEl) {
+            const now = new Date();
+            const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+            const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+            
+            const dayName = days[now.getDay()];
+            const day = String(now.getDate()).padStart(2, '0');
+            const monthName = months[now.getMonth()];
+            const year = now.getFullYear();
+            
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            
+            clockEl.innerText = `${dayName}, ${day} ${monthName} ${year} ${hours}:${minutes}:${seconds}`;
+        }
+    }, 1000);
+</script>
