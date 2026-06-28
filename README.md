@@ -52,11 +52,30 @@ A C# console application demonstrating C# datetime calculation operations by tak
 ### 10. [Constructor Assignment](./ConstructorAssignment)
 A C# console application demonstrating constant variables, implicitly typed variables (using `var`), and constructor chaining.
 
+### 11. [Car Insurance Portal](./CarInsurance)
+A high-fidelity ASP.NET Core MVC application with SQLite and Entity Framework Core. Computes monthly premium quotes server-side using detailed risk assessment rules (vehicle make/model, speeding tickets, age, coverage level, DUI surcharge) and displays them in a secure administrative portal.
+
+### 12. [Server Time Web App](./ServerTimeWeb)
+An ASP.NET Core Razor Pages application showcasing server system time retrieve logic using `DateTime.Now`, real-time ticking script updates, and clean separation of concerns in PageModels with a glassmorphism theme.
+
+### 13. [EF Core Code-First Console App](./EntityFrameworkCodeFirst)
+A console application utilizing Entity Framework Core Code-First conventions. Dynamically generates SQLite schema database tables from raw C# models and seeds a mock database record upon execution.
+
+---
+
+## 🧠 Core C# & .NET Skills Gained
+
+* **Object-Oriented Programming (OOP):** Class inheritance, abstract classes, method overloading/overriding, interfaces, polymorphism, constructor chaining, output parameters (`out`).
+* **Advanced C# Syntax:** Operator overloading (e.g. `==` and `!=` pairs), lambda expressions, LINQ, constant variables, implicitly typed variables (`var`).
+* **Web App Architecture:** ASP.NET Core MVC pattern, Razor Pages page model lifecycles (`OnGet` / `OnPost`), controller actions, view models, routing.
+* **Database Management:** Entity Framework Core (Code-First workflows, database migrations, seeding, SQLite integration).
+
 ---
 
 ## 📦 Getting Started
 
 ### 1. Clone the Repository
 ```bash
-git clone [https://github.com/your-username/C-Sharp-Projects.git](https://github.com/your-username/C-Sharp-Projects.git)
-cd C-Sharp-Projects
+git clone https://github.com/TrevonK-coder/c-projects.git
+cd c-projects
+```
